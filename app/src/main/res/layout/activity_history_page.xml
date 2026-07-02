@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp"
+    tools:ignore="HardcodedText,ContentDescription,ButtonStyle">
+
+    <RelativeLayout
+        android:id="@+id/history_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_arrow_back"
+            app:tint="@color/brand_blue"
+            android:contentDescription="Back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="История"
+            android:textColor="@color/text_dark"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/btnHistoryAction"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_exit_action"
+            app:tint="@color/brand_blue"
+            android:contentDescription="Action" />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/history_toolbar"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rbNewFirst"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Отображать сначала новые старты"
+            android:checked="true"
+            android:textColor="@color/text_dark"
+            android:buttonTint="@color/brand_blue"
+            android:layout_marginBottom="8dp"/>
+
+        <RadioButton
+            android:id="@+id/rbOldFirst"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Отображать сначала старые старты"
+            android:textColor="@color/text_dark"
+            android:buttonTint="@color/brand_blue"
+            android:layout_marginBottom="8dp"/>
+
+        <RadioButton
+            android:id="@+id/rbPostponed"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:textColor="@color/text_dark"
+            android:buttonTint="@color/brand_blue"
+            android:text="Отображать пренесенные старты" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:text="Сбросить настройки"
+        android:textColor="@color/white"
+        android:background="@drawable/btn_rounded"
+        app:backgroundTint="@null" />
+
+</RelativeLayout>
